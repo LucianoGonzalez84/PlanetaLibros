@@ -1,4 +1,5 @@
-:root{
+/* -------------------- Variables de diseño -------------------- */
+:root {
     --colorBlanco: #ffffff;
     --colorGrisOscuro: #424242;
     --colorAzul: #0054dc;
@@ -8,35 +9,48 @@
     --anchoMaximo: 1200px;
 }
 
-*{
+/* -------------------- Estilos de reseteo -------------------- */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5%; 
 }
 
-body{
-    
-}
-
-a{
+/* -------------------- Enlaces y Listas -------------------- */
+a {
     text-decoration: none;
 }
 
-ul, ol{
+ul, ol {
     list-style: none;
 }
 
-/* HEADER + NABVAR */
+h1{
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--colorGrisOscuro);
+    border-bottom: 1px solid var(--colorGrisOscuro);
+    margin-top: 5rem;
+    padding-top: 3rem;
+}
+
+/* -------------------- HEADER -------------------- */
 .header {
     height: 8rem;
     background-color: var(--colorBlanco);
-    box-shadow: 0px 2px 6px 0px rgba(145,145,145,1);
+    box-shadow: 0px 2px 6px 0px rgba(145, 145, 145, 1); /* Sombra para el header */
+    margin-bottom: 5rem;
 }
+
+/* -------------------- NAVBAR -------------------- */
 .navbar {
     height: 100%;
     display: flex;
-    width: min(1200px, 100%);
+    width: min(90vw, 100%);
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -45,18 +59,8 @@ ul, ol{
     padding: 0 3rem;
     z-index: 10;
 }
-.menu_hamburguesa{
-    display: none;
-}
-.menu_hamburguesa:checked + .ul_links{
-    height: calc(100vh - 8rem);
-}
-/* .label_hamburguesa {
-    display: none;
-} */
-.list_icon {
-    cursor: pointer;
-}
+
+/* -------------------- Lista de navegación desplegable -------------------- */
 .ul_links {
     background-color: var(--colorGrisOscuro);
     width: 100%;
@@ -72,8 +76,16 @@ ul, ol{
     gap: 2rem;
     transition: all .3s;
 }
-.li_links {
+
+/* -------------------- Menú hamburguesa -------------------- */
+.menu_hamburguesa {
+    display: none;
 }
+
+.menu_hamburguesa:checked + .ul_links {
+    height: calc(100vh - 8rem);
+}
+
 .link {
     font-family: var(--fuentePrincipal);
     font-size: 2.5rem;
@@ -81,93 +93,163 @@ ul, ol{
     color: var(--colorBlanco);
 }
 
-.link:hover{
+.link:hover {
     font-weight: bold;
 }
 
-/* MAIN */
+.carousel{
+    width: min(90vw, 100%);
+    margin:0 auto;
+}
 
-main{
-    width: min(1200px, 100%);
+
+
+.carousel-caption {
+    display: none;
+  }
+
+
+
+
+/* -------------------- MAIN -------------------- */
+main {
+    width: min(90vw, 100%);
     margin: 0 auto;
 }
-.productos{
+
+/* -------------------- Sección de productos -------------------- */
+.productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 3rem;
     padding: 3rem;
+    margin-top: 2rem;
 }
 
-.card{
-  width: 100%;               
-  box-sizing: border-box;    
-  max-width: 22rem;         
+/* -------------------- Tarjetas de productos -------------------- */
+.card {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
 }
 
-.card img{
+.card img {
     width: 100%;
     height: auto;
 }
 
-.card-body{
+/* -------------------- Contenedor del ícono -------------------- */
+.icon-container {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+/* -------------------- Ícono de corazón -------------------- */
+.bi-heart {
+    color: var(--colorGrisOscuro);
+    cursor: pointer; 
+}
+
+/* -------------------- Card Body -------------------- */
+.card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
 }
 
-.card-title{
+/* -------------------- Títulos y precios -------------------- */
+.card-title {
     font-family: var(--fuentePrincipal);
     text-transform: uppercase;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
     color: var(--colorGrisOscuro);
 }
 
-.nombreAutor{
+.nombreAutor {
     font-family: var(--fuentePrincipal);
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--colorGrisOscuro);
 }
 
-.precioLibro{
+.precioLibro {
     font-family: var(--fuentePrincipal);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: var(--colorNaranja);
 }
 
+/* -------------------- Botón de compra y etiquetas -------------------- */
 .containerBotonComprar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
 }
 
-.btn{
+.btn {
     background-color: var(--colorAzul);
     color: var(--colorBlanco);
     font-family: var(--fuentePrincipal);
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.7rem;
+    width: 100%;
+    height: 4rem;
 }
 
-.containerEtiquetas{
-    display: flex;
-  justify-content: space-around;
-  width: 100%;      
-    
-}
+/* -------------------- Media Queries -------------------- */
 
-
-
-
-
-@media (min-width:768px){
-    .label_hamburguesa{
+/* Pantallas grandes (min-width: 1200px) */
+@media (min-width: 1200px) {
+    /* Ajustes en la barra de navegación */
+    .navbar {
+        width: min(75vw, 100%);
+    }
+    .label_hamburguesa {
         display: none;
     }
-    .ul_links{
+
+    .carousel{
+        width: min(75vw, 100%);
+        margin: 0 auto;    
+    }
+
+    .carousel-caption {
+        top: 28rem;
+        bottom: auto;
+        display: block; 
+      }
+    
+    
+      .frase_carousel{
+        font-family: var(--fuenteSecundaria);
+        color: var(--colorBlanco);
+        font-size: 2.2rem;
+    }
+    
+    .autorFrase_carousel{
+        font-family: var(--fuenteSecundaria);
+        color: var(--colorBlanco);
+        font-size: 1.7rem;
+    }
+
+    /* Ajustes en el main */
+    main {
+        width: min(75vw, 100%);
+        margin: 0 auto;
+    }
+
+    /* Lista de navegación */
+    .ul_links {
         position: static;
         width: auto;
         height: auto;
@@ -175,30 +257,60 @@ main{
         gap: 3rem;
         background-color: var(--colorBlanco);
     }
-
-    .link{
+    
+    /* Ajustes en los enlaces de navegación */
+    .link {
         font-size: 1.5rem;
         color: var(--colorGrisOscuro);
         transition: all .3s;
     }
 
-    .card{
+    /* Ajustes en las tarjetas */
+    .card {
         width: 100%;
+        box-sizing: border-box;
+        max-width: 22rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
     }
     
+    .nombreAutor {
+        font-size: 1rem;
+    }
+    
+    .precioLibro {
+        font-size: 1.4rem;
+    }
+
+    /* Botón de compra y etiquetas */
+    .containerBotonComprar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        height: 3rem;
+    }
+
+    .containerEtiquetas {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
 
-
-@media (min-width: 1400px) {
-    .card {
-      width: 22%;              
+/* Pantallas medianas (min-width: 768px) y max-width: 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .productos {
+        justify-content: space-evenly; 
     }
-  }
 
-
-  @media (max-width: 768px) {
     .card {
-        width: 100%;
-        
+        width: 48%; 
     }
 }
