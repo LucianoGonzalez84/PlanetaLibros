@@ -1,0 +1,204 @@
+:root{
+    --colorBlanco: #ffffff;
+    --colorGrisOscuro: #424242;
+    --colorAzul: #0054dc;
+    --colorNaranja: #d6680b;
+    --fuentePrincipal: "Cantarell", sans-serif;
+    --fuenteSecundaria: "Fjalla One", sans-serif;
+    --anchoMaximo: 1200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+/* HEADER + NABVAR */
+.header {
+    height: 8rem;
+    background-color: var(--colorBlanco);
+    box-shadow: 0px 2px 6px 0px rgba(145,145,145,1);
+}
+.navbar {
+    height: 100%;
+    display: flex;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 3rem;
+    z-index: 10;
+}
+.menu_hamburguesa{
+    display: none;
+}
+.menu_hamburguesa:checked + .ul_links{
+    height: calc(100vh - 8rem);
+}
+/* .label_hamburguesa {
+    display: none;
+} */
+.list_icon {
+    cursor: pointer;
+}
+.ul_links {
+    background-color: var(--colorGrisOscuro);
+    width: 100%;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: all .3s;
+}
+.li_links {
+}
+.link {
+    font-family: var(--fuentePrincipal);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--colorBlanco);
+}
+
+.link:hover{
+    font-weight: bold;
+}
+
+/* MAIN */
+
+main{
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.card{
+  width: 100%;               
+  box-sizing: border-box;    
+  max-width: 22rem;         
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-title{
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--colorGrisOscuro);
+}
+
+.nombreAutor{
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--colorGrisOscuro);
+}
+
+.precioLibro{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    color: var(--colorNaranja);
+}
+
+.containerBotonComprar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    background-color: var(--colorAzul);
+    color: var(--colorBlanco);
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.containerEtiquetas{
+    display: flex;
+  justify-content: space-around;
+  width: 100%;      
+    
+}
+
+
+
+
+
+@media (min-width:768px){
+    .label_hamburguesa{
+        display: none;
+    }
+    .ul_links{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 3rem;
+        background-color: var(--colorBlanco);
+    }
+
+    .link{
+        font-size: 1.5rem;
+        color: var(--colorGrisOscuro);
+        transition: all .3s;
+    }
+
+    .card{
+        width: 100%;
+    }
+    
+}
+
+
+@media (min-width: 1400px) {
+    .card {
+      width: 22%;              
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .card {
+        width: 100%;
+        
+    }
+}
