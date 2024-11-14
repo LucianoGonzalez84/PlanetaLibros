@@ -1,15 +1,15 @@
-/* -------------------- Variables de diseño -------------------- */
+/* Variables de diseño */
 :root {
     --colorBlanco: #ffffff;
     --colorGrisOscuro: #424242;
-    --colorAzul: #0054dc;
+    --colorverde: #a0cc3a;
     --colorNaranja: #d6680b;
     --fuentePrincipal: "Cantarell", sans-serif;
     --fuenteSecundaria: "Fjalla One", sans-serif;
     --anchoMaximo: 1200px;
 }
 
-/* -------------------- Estilos de reseteo -------------------- */
+/* Estilos de reseteo */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@
     font-size: 62.5%;
 }
 
-/* -------------------- Enlaces y Listas -------------------- */
+
 a {
     text-decoration: none;
 }
@@ -28,27 +28,25 @@ ol {
 }
 
 h1 {
-    font-family: var(--fuentePrincipal);
-    font-size: 3rem;
+    font-family: var(--fuenteSecundaria);
+    font-size: 3.3rem;
     display: block;
     width: 100%;
-    text-transform: uppercase;
-    color: var(--colorGrisOscuro);
-    border-bottom: 1px solid var(--colorGrisOscuro);
+
+    color: var(--colorNaranja);
+    border-bottom: 2px solid var(--colorNaranja);
     margin-top: 3rem;
     padding-top: 3rem;
 }
 
-/* -------------------- HEADER -------------------- */
+/* Estilos para pantallas pequeñas menores a 768px */
 .header {
     height: 8rem;
     background-color: var(--colorBlanco);
     box-shadow: 0px 2px 6px 0px rgba(145, 145, 145, 1);
-    /* Sombra para el header */
     margin-bottom: 5rem;
 }
 
-/* -------------------- NAVBAR -------------------- */
 .navbar {
     height: 100%;
     display: flex;
@@ -62,7 +60,6 @@ h1 {
     z-index: 10;
 }
 
-/* -------------------- Lista de navegación desplegable -------------------- */
 .ul_links {
     background-color: var(--colorGrisOscuro);
     width: 100%;
@@ -79,7 +76,6 @@ h1 {
     transition: all .3s;
 }
 
-/* -------------------- Menú hamburguesa -------------------- */
 .menu_hamburguesa {
     display: none;
 }
@@ -93,6 +89,7 @@ h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     color: var(--colorBlanco);
+    transition: all .3s;
 }
 
 .link:hover {
@@ -108,7 +105,6 @@ h1 {
     display: none;
 }
 
-/* -------------------- MAIN -------------------- */
 main {
     width: min(90vw, 100%);
     margin: 0 auto;
@@ -116,7 +112,6 @@ main {
     flex-direction: column;
 }
 
-/* -------------------- Sección de productos -------------------- */
 .productos {
     display: flex;
     flex-wrap: wrap;
@@ -126,20 +121,24 @@ main {
     margin-top: 2rem;
 }
 
-/* -------------------- Tarjetas de productos -------------------- */
 .card {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
+    transition: all .3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
     width: 100%;
-    height:45rem; 
+    height: 45rem;
 }
 
-/* -------------------- Contenedor del ícono -------------------- */
 .icon-container {
     position: absolute;
     top: 10px;
@@ -150,22 +149,18 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* -------------------- Ícono de corazón -------------------- */
 .bi-heart {
     color: var(--colorGrisOscuro);
     cursor: pointer;
 }
 
-/* -------------------- Card Body -------------------- */
 .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
-    
 }
 
-/* -------------------- Títulos y precios -------------------- */
 .card-title {
     font-family: var(--fuentePrincipal);
     text-transform: uppercase;
@@ -188,22 +183,27 @@ main {
     color: var(--colorNaranja);
 }
 
-/* -------------------- Botón de compra y etiquetas -------------------- */
 .containerBotonComprar {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .botonCard {
-    background-color: var(--colorAzul);
+    background-color: var(--colorverde);
     color: var(--colorBlanco);
     font-family: var(--fuentePrincipal);
     text-transform: uppercase;
     font-size: 1.7rem;
     width: 100%;
     height: 4rem;
+    transition: all .3s;
+}
+
+.botonCard:hover {
+    background-color: #83a731;
+    color: var(--colorBlanco);
 }
 
 .reseñas {
@@ -223,7 +223,6 @@ main {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .reseña-imagen {
     width: 15rem;
@@ -254,10 +253,11 @@ main {
 
 .estrellas {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1.5rem;
     align-items: center;
     font-size: 1.5rem;
-    color: #FFD700;
+    color: var(--colorNaranja);
 }
 
 .formulario {
@@ -334,20 +334,88 @@ main {
     font-size: 1.5rem;
     width: 100%;
     height: 4rem;
+    transition: all .3s;
 }
 
+.botonformulario:hover {
+    background-color: #bb5b0d;
+    color: var(--colorBlanco);
+}
 
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorGrisOscuro);
+    width: 100%;
+    margin-top: 7rem;
+}
 
+.footer-iframe {
+    height: 25rem;
+    width: 100%;
+}
 
+.iframe {
+    width: 100%;
+    height: 100%;
+}
 
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(90vw, 100%);
+    padding: 5rem 0 3rem 0;
+    margin: 0 auto;
+}
 
+.footer-info-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+    width: 20rem;
+}
 
-/* -------------------- Media Queries -------------------- */
+.footer-info-info span {
+    font-family: var(--fuenteSecundaria);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: var(--colorBlanco);
+    margin-bottom: 0.5rem;
+}
 
-/* Pantallas grandes (min-width: 1200px) */
+.footer-info-info a {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.5rem;
+    color: var(--colorBlanco);
+    transition: all .3s;
+}
+
+.footer-info-info a:hover {
+    color: var(--colorNaranja);
+}
+
+.footer-iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-info-info svg {
+    color: var(--colorBlanco);
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.footer-info-info svg:hover {
+    color: var(--colorNaranja);
+}
+
+/* Estilos para pantallas grandes a partir de 1200px */
 @media (min-width: 1200px) {
-
-    /* Ajustes en la barra de navegación */
     .navbar {
         width: min(75vw, 100%);
     }
@@ -367,7 +435,6 @@ main {
         display: block;
     }
 
-
     .frase_carousel {
         font-family: var(--fuenteSecundaria);
         color: var(--colorBlanco);
@@ -380,13 +447,11 @@ main {
         font-size: 1.7rem;
     }
 
-    /* Ajustes en el main */
     main {
         width: min(75vw, 100%);
         margin: 0 auto;
     }
 
-    /* Lista de navegación */
     .ul_links {
         position: static;
         width: auto;
@@ -396,14 +461,12 @@ main {
         background-color: var(--colorBlanco);
     }
 
-    /* Ajustes en los enlaces de navegación */
     .link {
         font-size: 1.5rem;
         color: var(--colorGrisOscuro);
         transition: all .3s;
     }
 
-    /* Ajustes en las tarjetas */
     .card {
         width: 100%;
         box-sizing: border-box;
@@ -412,8 +475,8 @@ main {
 
     .card img {
         width: 100%;
-        height:35rem; 
-    }   
+        height: 35rem;
+    }
 
     .card-title {
         font-size: 1.5rem;
@@ -428,7 +491,6 @@ main {
         font-size: 1.4rem;
     }
 
-    /* Botón de compra y etiquetas */
     .containerBotonComprar {
         display: flex;
         justify-content: space-between;
@@ -436,7 +498,7 @@ main {
     }
 
     .botonCard {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         height: 3rem;
     }
 
@@ -448,28 +510,26 @@ main {
 
     .reseñas {
         grid-template-columns: repeat(3, 1fr);
-        /* 3 columnas en pantallas grandes */
         width: min(75vw, 100%);
     }
 
     .formulario {
         width: min(75vw, 100%);
         flex-direction: row;
-        
     }
 
     .formulario-imagen {
         width: 40%;
     }
-    
+
     .formulario-imagen img {
         height: 35rem;
     }
-    
+
     .formulario-contacto {
         width: 100%;
     }
-    
+
     .contenedorBotonformulario {
         display: flex;
         justify-content: center;
@@ -477,7 +537,7 @@ main {
         margin-top: 3rem;
         margin-bottom: 0.6rem;
     }
-    
+
     .botonformulario {
         background-color: var(--colorNaranja);
         color: var(--colorBlanco);
@@ -486,12 +546,30 @@ main {
         font-size: 1.5rem;
         width: 30%;
         height: 4rem;
-        ;
     }
+
+    footer {
+        margin-top: 10rem;
+    }
+
+    .footer-iframe {
+        height: 25rem;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        width: min(75vw, 100%);
+        margin: 0 auto;
+    }
+
 }
 
-/* Pantallas medianas (min-width: 768px) y max-width: 1199px */
+/* Estilos para pantallas de tamaño medio entre 768px y 1199px */
 @media (min-width: 768px) and (max-width: 1199px) {
+
     .productos {
         justify-content: space-evenly;
     }
@@ -499,6 +577,4 @@ main {
     .card {
         width: 48%;
     }
-
-
 }
