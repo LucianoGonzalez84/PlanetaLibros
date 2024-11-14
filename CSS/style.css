@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 62.5%; 
+    font-size: 62.5%;
 }
 
 /* -------------------- Enlaces y Listas -------------------- */
@@ -22,11 +22,12 @@ a {
     text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
-h1{
+h1 {
     font-family: var(--fuentePrincipal);
     font-size: 3rem;
     display: block;
@@ -34,7 +35,7 @@ h1{
     text-transform: uppercase;
     color: var(--colorGrisOscuro);
     border-bottom: 1px solid var(--colorGrisOscuro);
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding-top: 3rem;
 }
 
@@ -42,7 +43,8 @@ h1{
 .header {
     height: 8rem;
     background-color: var(--colorBlanco);
-    box-shadow: 0px 2px 6px 0px rgba(145, 145, 145, 1); /* Sombra para el header */
+    box-shadow: 0px 2px 6px 0px rgba(145, 145, 145, 1);
+    /* Sombra para el header */
     margin-bottom: 5rem;
 }
 
@@ -82,7 +84,7 @@ h1{
     display: none;
 }
 
-.menu_hamburguesa:checked + .ul_links {
+.menu_hamburguesa:checked+.ul_links {
     height: calc(100vh - 8rem);
 }
 
@@ -97,19 +99,14 @@ h1{
     font-weight: bold;
 }
 
-.carousel{
+.carousel {
     width: min(90vw, 100%);
-    margin:0 auto;
+    margin: 0 auto;
 }
-
-
 
 .carousel-caption {
     display: none;
-  }
-
-
-
+}
 
 /* -------------------- MAIN -------------------- */
 main {
@@ -145,18 +142,18 @@ main {
 /* -------------------- Contenedor del ícono -------------------- */
 .icon-container {
     position: absolute;
-    top: 10px; 
-    right: 10px; 
+    top: 10px;
+    right: 10px;
     background-color: white;
     border-radius: 50%;
     padding: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* -------------------- Ícono de corazón -------------------- */
 .bi-heart {
     color: var(--colorGrisOscuro);
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 /* -------------------- Card Body -------------------- */
@@ -198,7 +195,7 @@ main {
     margin-bottom: 0.6rem;
 }
 
-.btn {
+.botonCard {
     background-color: var(--colorAzul);
     color: var(--colorBlanco);
     font-family: var(--fuentePrincipal);
@@ -208,7 +205,7 @@ main {
     height: 4rem;
 }
 
-.reviews-section {
+.reseñas {
     display: grid;
     gap: 2rem;
     padding: 1rem;
@@ -218,7 +215,7 @@ main {
     margin-top: 2rem;
 }
 
-.review {
+.reseña {
     text-align: center;
     padding: 3rem;
     border: 1px solid #ddd;
@@ -227,7 +224,7 @@ main {
 }
 
 
-.review-image {
+.reseña-imagen {
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
@@ -235,7 +232,7 @@ main {
     margin-bottom: 1rem;
 }
 
-.review-name {
+.reseña-nombre {
     font-weight: bold;
     text-align: center;
     margin: 0;
@@ -244,54 +241,139 @@ main {
     margin-bottom: 2rem;
 }
 
-
-
-
-.review-text {
+.reseña-opinion {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     font-family: var(--fuentePrincipal);
     font-size: 1.6rem;
     font-style: italic;
     margin-bottom: 2rem;
+    height: 7rem;
 }
 
-.stars {
+.estrellas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     font-size: 1.5rem;
-    color: #FFD700; /* Color dorado para las estrellas */
+    color: #FFD700;
 }
+
+.formulario {
+    width: min(90vw, 100%);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 0px 7px 1px rgb(212, 212, 212);
+    margin-top: 3rem;
+}
+
+.formulario-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: #f3f3f3;
+}
+
+.formulario-imagen img {
+    height: 20rem;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.contacto-label {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--colorNaranja);
+    margin-bottom: 0.4rem;
+}
+
+.contacto-input {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    font-weight: 100;
+    height: 2.5rem;
+    padding-left: .5rem;
+    color: var(--colorGrisOscuro);
+    margin-bottom: 1.1rem;
+}
+
+.contacto-textarea {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    font-weight: 100;
+    height: 15rem;
+    resize: none;
+    overflow-y: auto;
+    padding-left: .5rem;
+    color: var(--colorGrisOscuro);
+    margin-bottom: 3rem;
+}
+
+.contenedorBotonformulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 0.6rem;
+}
+
+.botonformulario {
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 4rem;
+}
+
+
+
+
+
+
 
 /* -------------------- Media Queries -------------------- */
 
 /* Pantallas grandes (min-width: 1200px) */
 @media (min-width: 1200px) {
+
     /* Ajustes en la barra de navegación */
     .navbar {
         width: min(75vw, 100%);
     }
+
     .label_hamburguesa {
         display: none;
     }
 
-    .carousel{
+    .carousel {
         width: min(75vw, 100%);
-        margin: 0 auto;    
+        margin: 0 auto;
     }
 
     .carousel-caption {
         top: 28rem;
         bottom: auto;
-        display: block; 
-      }
-    
-    
-      .frase_carousel{
+        display: block;
+    }
+
+
+    .frase_carousel {
         font-family: var(--fuenteSecundaria);
         color: var(--colorBlanco);
         font-size: 2.2rem;
     }
-    
-    .autorFrase_carousel{
+
+    .autorFrase_carousel {
         font-family: var(--fuenteSecundaria);
         color: var(--colorBlanco);
         font-size: 1.7rem;
@@ -312,7 +394,7 @@ main {
         gap: 3rem;
         background-color: var(--colorBlanco);
     }
-    
+
     /* Ajustes en los enlaces de navegación */
     .link {
         font-size: 1.5rem;
@@ -331,11 +413,11 @@ main {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
     }
-    
+
     .nombreAutor {
         font-size: 1rem;
     }
-    
+
     .precioLibro {
         font-size: 1.4rem;
     }
@@ -347,7 +429,7 @@ main {
         align-items: center;
     }
 
-    .btn {
+    .botonCard {
         font-size: 1.1rem;
         height: 3rem;
     }
@@ -357,21 +439,60 @@ main {
         justify-content: space-around;
         width: 100%;
     }
-    .reviews-section {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+
+    .reseñas {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas en pantallas grandes */
         width: min(75vw, 100%);
+    }
+
+    .formulario {
+        width: min(75vw, 100%);
+        flex-direction: row;
+        
+    }
+
+    .formulario-imagen {
+        width: 40%;
+    }
+    
+    .formulario-imagen img {
+        height: 35rem;
+    }
+    
+    .formulario-contacto {
+        width: 100%;
+    }
+    
+    .contenedorBotonformulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .botonformulario {
+        background-color: var(--colorNaranja);
+        color: var(--colorBlanco);
+        font-family: var(--fuentePrincipal);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        width: 30%;
+        height: 4rem;
+        ;
     }
 }
 
 /* Pantallas medianas (min-width: 768px) y max-width: 1199px */
 @media (min-width: 768px) and (max-width: 1199px) {
     .productos {
-        justify-content: space-evenly; 
+        justify-content: space-evenly;
     }
 
     .card {
-        width: 48%; 
+        width: 48%;
     }
-    
-    
+
+
 }
