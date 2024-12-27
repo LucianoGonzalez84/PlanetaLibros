@@ -112,7 +112,7 @@ main {
     flex-direction: column;
 }
 
-.productos {
+.productosContenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
