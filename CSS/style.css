@@ -4,6 +4,7 @@
     --colorGrisOscuro: #424242;
     --colorverde: #a0cc3a;
     --colorNaranja: #d6680b;
+    --colorRojo: #ee2a00;
     --fuentePrincipal: "Cantarell", sans-serif;
     --fuenteSecundaria: "Fjalla One", sans-serif;
     --anchoMaximo: 1200px;
@@ -32,7 +33,6 @@ h1 {
     font-size: 3.3rem;
     display: block;
     width: 100%;
-
     color: var(--colorNaranja);
     border-bottom: 2px solid var(--colorNaranja);
     margin-top: 3rem;
@@ -41,16 +41,16 @@ h1 {
 
 /* Estilos para pantallas pequeñas menores a 768px */
 .header {
-    height: 8rem;
+    height: auto;
     background-color: var(--colorBlanco);
-    box-shadow: 0px 2px 6px 0px rgba(145, 145, 145, 1);
+    width: 100%;   
     margin-bottom: 5rem;
 }
 
 .navbar {
-    height: 100%;
+    height: 8rem;
     display: flex;
-    width: min(90vw, 100%);
+    width: 100%;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -58,6 +58,8 @@ h1 {
     position: relative;
     padding: 0 3rem;
     z-index: 10;
+    box-shadow: 0px 2px 6px 0px rgba(145, 145, 145, 1);
+    box-sizing: border-box;
 }
 
 .ul_links {
@@ -76,6 +78,17 @@ h1 {
     transition: all .3s;
 }
 
+.ul_links i{
+    font-size: 2.5rem;
+    transition: all .3s;
+}
+
+.ul_links i:hover{
+    color: var(--colorNaranja);
+    font-weight: bold;
+}
+
+
 .menu_hamburguesa {
     display: none;
 }
@@ -93,11 +106,11 @@ h1 {
 }
 
 .link:hover {
-    font-weight: bold;
+    color: var(--colorNaranja);
 }
 
 .carousel {
-    width: min(90vw, 100%);
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -414,10 +427,88 @@ footer {
     color: var(--colorNaranja);
 }
 
+/* Estilos carrito */
+
+.contenedorCarrito{
+    margin-top: 3rem;
+}
+
+.encabezadoTabla{
+    font-family: var(--fuentePrincipal);
+}
+
+
+.encabezadoTabla th {
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+td{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    color: var(--colorverde);
+}
+
+h4{
+    font-family: var(--fuentePrincipal) !important;
+    font-size: 1.4rem !important;
+    text-transform: uppercase !important;
+    color: var(--colorNaranja);
+    font-weight:bold;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.totalCarrito{
+    font-family: var(--fuentePrincipal) !important;
+    font-size: 1.4rem !important;
+    text-transform: uppercase !important;
+}
+
+
+.finalizarCompra {
+    background-color: var(--colorverde);
+    color: var(--colorBlanco);
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    width: auto;
+    height: auto;
+    transition: all .3s;
+    border: none;
+}
+
+.finalizarCompra:hover {
+    background-color: #83a731;
+    color: var(--colorBlanco);
+}
+
+.limpiarCarrito {
+    background-color: var(--colorRojo);
+    color: var(--colorBlanco);
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    width: auto;
+    height: auto;
+    transition: all .3s;
+    border: none;
+}
+
+.limpiarCarrito:hover {
+    background-color: #ca2400;
+    color: var(--colorBlanco);
+}
+
+
 /* Estilos para pantallas grandes a partir de 1200px */
 @media (min-width: 1200px) {
     .navbar {
-        width: min(75vw, 100%);
+        width: 100%;
     }
 
     .label_hamburguesa {
@@ -425,7 +516,7 @@ footer {
     }
 
     .carousel {
-        width: min(75vw, 100%);
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -459,6 +550,10 @@ footer {
         flex-direction: row;
         gap: 3rem;
         background-color: var(--colorBlanco);
+    }
+
+    .ul_links i{
+        font-size: 1.4em;
     }
 
     .link {
